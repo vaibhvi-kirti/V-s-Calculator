@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <title>V's Calculator</title>
+  <style>
+     *{
+      background-color: cadetblue;
+     }
+     h1{
+      display: flex;
+      justify-content: center;
+     }
+     div{
+
+      margin-left: 625px;
+     }
+   .dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 1500;
+  font-style: normal;
+     }
+     .cal{
+      margin: 5px;
+      display: inline-block;
+      height: 80px;
+      width: 80px;
+      border-radius: 15px;
+      background-color: darkcyan;
+      font-size: 20px;
+     }
+     #inp{
+      margin-left: 630px;
+      height: 130px;
+      width: 260px;
+      background-color: rgba(64, 59, 59, 0.849);
+      border: 10px;
+      border-radius: 5px;
+      font-size: 40px;
+      color:rgba(245, 245, 245, 0.701) ;
+
+     }
+     #un{
+      width: 268px;
+      font-size: 20px;
+     }
+  </style>
+</head>
+<body>
+  <h1 class="dancing-script">V's CALCULATOR</h1>
+  <input type="text" id="inp" readonly>
+  <br>
+  <div>
+  <button class="cal" onclick="cd=cd+'1';document.querySelector('#inp').value=cd;">1</button>
+  <button class="cal" onclick="cd=cd+'2';document.querySelector('#inp').value=cd;" >2</button>
+  <button class="cal" onclick="cd=cd+'3';document.querySelector('#inp').value=cd;" >3</button><br>
+  <button class="cal" onclick="cd=cd+'4';document.querySelector('#inp').value=cd;">4</button>
+  <button class="cal" onclick="cd=cd+'5';document.querySelector('#inp').value=cd;">5</button>
+  <button class="cal" onclick="cd=cd+'6';document.querySelector('#inp').value=cd;">6</button><br>
+  <button class="cal" onclick="cd=cd+'7';document.querySelector('#inp').value=cd;">7</button>
+  <button class="cal" onclick="cd=cd+'8';document.querySelector('#inp').value=cd;">8</button>
+  <button class="cal" onclick="cd=cd+'9';document.querySelector('#inp').value=cd;">9</button><br>
+  <button class="cal"onclick="cd=cd+'0';document.querySelector('#inp').value=cd;">0</button>
+  <button class="cal"onclick="cd=cd+'+';document.querySelector('#inp').value=cd;">+</button>
+  <button class="cal" onclick="cd=cd+'-';document.querySelector('#inp').value=cd;">-</button><br>
+  <button class="cal" onclick="cd=cd+'*';document.querySelector('#inp').value=cd;">*</button>
+  <button class="cal" onclick="cd=cd+'/';document.querySelector('#inp').value=cd;">/</button>
+  <button class="cal" onclick="cd=eval(cd);document.querySelector('#inp').value=cd;">=</button><br>
+  <button class="cal" id="un" onclick="cd='';document.querySelector('#inp').value=cd;">CLEAR</button>
+</div>
+  
+
+  
+ <script>
+  let cd='';
+  document.querySelector('#inp').value=cd;
+ </script> 
+</body>
+</html>
